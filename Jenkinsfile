@@ -1,15 +1,3 @@
-﻿pipeline {
-    agent {
-        docker {
-            image 'maven:3.6-alpine' 
-            args '-v C:\\Users\\lihao\\.m2:/root/.m2' 
-        }
-    }
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'mvn -B -DskipTests clean package' 
-            }
-        }
-    }
+﻿node {
+   echo 'Hello World'
 }
